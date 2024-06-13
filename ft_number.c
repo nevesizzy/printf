@@ -12,6 +12,7 @@
 
 #include "ft_printf.h"
 
+// especificador i e d
 int	ft_putnbr(int n)
 {
 	int	count;
@@ -29,7 +30,7 @@ int	ft_putnbr(int n)
 	count += ft_putchar((n % 10) + '0');
 	return (count);
 }
-// decimal sem sinal 'u'
+// especificador u
 
 int	ft_putnbr_unsigned(unsigned int n)
 {
@@ -41,7 +42,7 @@ int	ft_putnbr_unsigned(unsigned int n)
 	count += ft_putchar((n % 10) + '0');
 	return (count);
 }
-// impime base 16 hex
+// especificador x e X
 
 int	ft_putnbr_hex(unsigned long n, int uppercase)
 {
@@ -58,7 +59,7 @@ int	ft_putnbr_hex(unsigned long n, int uppercase)
 	count += ft_putchar(hex[n % 16]);
 	return (count);
 }
-// ponteio em hex
+// especificador p
 
 int	ft_putptr(void *ptr)
 {
@@ -76,3 +77,4 @@ int	ft_putptr(void *ptr)
 	count += ft_putnbr_hex(addr, 0);
 	return (count);
 }
+
