@@ -12,6 +12,14 @@
 
 #include "ft_printf.h"
 
+// especificador c
+
+int	ft_putchar(char c)
+{
+	return (write (1, &c, 1));
+}
+// especificador s 
+
 static size_t	ft_strlen(const char *s)
 {
 	int	i;
@@ -21,13 +29,6 @@ static size_t	ft_strlen(const char *s)
 		i++;
 	return (i);
 }
-// Imprime caractere
-
-int	ft_putchar(char c)
-{
-	return (write (1, &c, 1));
-}
-// Imprime uma string 
 
 int	ft_putstr(char *str)
 {
